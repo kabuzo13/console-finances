@@ -30,7 +30,7 @@ This is deployed at: https://kabuzo13.github.io/console-finances/
 
 ## Credits
 
-Used starter code from edX Boot Camps LLC
+Used starter code from edX Boot Camps LLC with help from the 1:1 tutoring services. The variable names were specified and help with constructing the for loops was given. 
 
 ## License
 
