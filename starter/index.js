@@ -97,13 +97,50 @@ var total = 0;
 
 for (let i = 0; i < finances.length; i++) {
   const arr = finances[i];
-  total = total + arr[1];
+  net = total + arr[1];
 }
 
-console.log("Total: $" + total);
+console.log("Total: $" + net);
 
 // The average of the changes in Profit/Losses over the entire period.
+var months = finances.length;
+var total = 0;
+var change = 0;
+var avg;
+var analysis;
+var previousAmount = 0;
+var netChangeSum = 0;
+var least = ["", 9999999999999];
+var greatest = ["", 0];
+var currentMonth; 
+var date;
+var amount;
+for (let i = 0; i < finances.length; i++) {
+  currentMonth = finances[i];
+  date = currentMonth[0];
+  amount = currentMonth[1];
+  total += amount;
+  if (i > 0) 
+    change = amount - previousAmount;
+    previousAmount = amount;
+    netChangeSum += change;
+
+  if (change > greatest[1]) {
+    greatest = [date, change]
+  }
+  if (change < least[1]) {
+    least = [date, change]
+  }
+}
+
+avg = Math.round((netChangeSum/(finances.length - 1))*100)/100;
+
+
+console.log("Average Change: " + avg);
 
 // The greatest increase in Profit/Losses (date and difference in the amounts) over the entire period.
+console.log("Greatest Increase in Profits/Losses: " + greatest[0] + " ($" + greatest[1] + ")");
 
 // The greatest decrease in Profit/Losses (date and difference in the amounts) over the entire period.
+console.log("Greatest Decrease in Profits/Losses: " + least[0] + " ($" + least[1] + ")");
+
