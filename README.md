@@ -13,6 +13,11 @@ It has calculated:
 
 * The greatest decrease in Profit/Losses (date and difference in the amounts) over the entire period.
 
+
+![CCB2F791-5E90-450A-A7F1-6A8EA4A2EE1C](https://github.com/kabuzo13/console-finances/assets/151530090/04448cfa-c29c-469d-bc5d-c7b73c9e8f91)
+
+
+
 ## Installation
 
 N/A
@@ -20,6 +25,8 @@ N/A
 ## Usage
 
 Right-click to inspect the console. There you will find the Financial Analysis for the dataset provided. 
+
+This is deployed at: https://kabuzo13.github.io/console-finances/
 
 ## Credits
 
